@@ -1,0 +1,17 @@
+node
+{
+
+stage('SCM')
+{git 'https://github.com/venki090790/maven-samples.git'}
+
+
+stage('BUILD')
+sh label: '', script: 'mvn package'
+
+stage('ARTIFACT')
+{archive 'target/*.jar'}
+
+
+}
+
+
