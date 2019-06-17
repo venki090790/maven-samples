@@ -9,7 +9,7 @@ stage('BUILD')
 sh label: '', script: 'mvn package'
 
 stage('ARTIFACT')
-{archive 'target/*.jar'}
+{archiveArtifacts 'single-module/target/*.jar'}
 
 
 }
